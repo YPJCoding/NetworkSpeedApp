@@ -1,0 +1,35 @@
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+
+# Xcode user and build data
+DerivedData/
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.hmap
+
+# Application build and release artifacts
+build/
+dist/
+*.app/
+*.dSYM/
+*.ipa
+*.pkg
+*.zip
+*.sha256
+
+# Logs and coverage output
+*.log
+coverage/
+*.profdata
+*.gcda
+*.gcno
