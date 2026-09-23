@@ -25,6 +25,7 @@ dist/
 *.ipa
 *.pkg
 *.zip
+*.dmg
 *.sha256
 
 # Logs and coverage output

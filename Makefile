@@ -1,4 +1,4 @@
-.PHONY: build test run verify release icon clean
+.PHONY: build test run verify release dmg icon clean
 
 APP := build/Network Speed.app
 TEST_BINARY := .build/manual-tests/NetworkSpeedAppTests
@@ -29,7 +29,10 @@ verify: build test
 	lipo "$(APP)/Contents/MacOS/NetworkSpeedApp" -verify_arch arm64 x86_64
 
 release: verify
-	./scripts/package-release.sh
+	PACKAGE_FORMAT=all ./scripts/package-release.sh
+
+dmg: verify
+	PACKAGE_FORMAT=dmg ./scripts/package-release.sh
 
 icon:
 	./scripts/make-icon.sh

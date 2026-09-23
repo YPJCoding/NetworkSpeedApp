@@ -37,11 +37,14 @@ make verify
 build/Network Speed.app
 ```
 
+发布文件生成在 `dist/`，包含可拖入“应用程序”文件夹的 DMG 和便于自动化分发的 ZIP，二者均附带 SHA-256 校验文件。
+
 运行与发布：
 
 ```sh
 make run
-make release
+make dmg      # 仅生成 DMG
+make release  # 生成 ZIP 和 DMG
 ```
 
 公开分发时请通过 `APP_IDENTITY` 提供 Developer ID 签名身份，并按 Apple 要求完成公证；默认构建使用 ad-hoc 签名，适合本地运行。
